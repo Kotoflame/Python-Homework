@@ -41,7 +41,6 @@ csvpath = 'Resources/budget_data.csv' #assume path is set from the project folde
 with open(csvpath, encoding='utf') as csvfile: #use in-class taught csv read method
     csvreader = csv.reader(csvfile,delimiter=',')
     csvheader = next(csvreader) #skipping and grabbing the header
-    #print(f'header: {csvheader}')
     for entry in csvreader:
         MonthDate, MonthNet  = entry[0], float(entry[1])
         counter+=1
